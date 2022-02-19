@@ -1,0 +1,65 @@
+﻿<Window x:Class="fMSProject14"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    TextOptions.TextFormattingMode="Display"
+    TextOptions.TextRenderingMode="ClearType"
+    xmlns:AGVBW="clr-namespace:AGVBW;assembly=AGVBW"
+    Title="Project 2010 Integration" Height="300" Width="300" Background="#FFC0C0C0" Name="Window1">
+    <Grid Background="#FF2c3d5a">
+        <Menu Margin="0,0,0,0" Height="21" VerticalAlignment="Top" >
+            <Menu.Background>
+                <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                    <GradientStop Color="#FFcad3e2" Offset="0" />
+                    <GradientStop Color="#FFaeb9cd" Offset="1" />
+                </LinearGradientBrush>
+            </Menu.Background>
+            <MenuItem Header="_File">
+                <MenuItem Background="White" Name="mnuLoadXML" Header="Load MS-Project 2010 XML file..." IsCheckable="false" Padding="0,5,0,5">
+                    <MenuItem.Icon>
+                        <Image Source="images/ToolBars/open.gif" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Background="White" Name="mnuSaveXML" Header="Save MS-Project 2010 XML file..." IsCheckable="false" Padding="0,5,0,5">
+                    <MenuItem.Icon>
+                        <Image Source="images/ToolBars/save.gif" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Background="White" Name="mnuPrint" Header="_Print" IsCheckable="false" Padding="0,5,0,5">
+                    <MenuItem.Icon>
+                        <Image Source="images/ToolBars/printer.gif" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator Margin="0,0,0,0" />
+                <MenuItem Background="White" Name="mnuClose" Header="_Close" IsCheckable="false" Padding="0,5,0,5">
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <Rectangle Height="27" Margin="0,21,0,0" Name="Rectangle1" Fill="#FF9caac1" VerticalAlignment="Top"></Rectangle>
+        <ToolBar Height="26" Margin="0,21,78,0" Name="ToolBar1" VerticalAlignment="Top" Background="#FFbcc7d8">
+            <Button Name="cmdLoadXML" ToolTip="Load MS-Project 2010 XML file">
+                <Image Source="images/ToolBars/open.gif" Width="16" Height="16" Name="Image1" />
+            </Button>
+            <Button Name="cmdSaveXML" ToolTip="Save MS-Project 2010 XML file">
+                <Image Source="images/ToolBars/save.gif" Width="16" Height="16"/>
+            </Button>
+            <Button Name="cmdPrint" ToolTip="Print">
+                <Image Source="images/ToolBars/printer.gif" Width="16" Height="16"/>
+            </Button>
+            <Button Name="cmdIndent" ToolTip="Indent an XML file">
+                <Image Source="images/ToolBars/indent.gif" Width="16" Height="16"/>
+            </Button>
+            <Separator></Separator>
+            <Button Name="cmdZoomIn" ToolTip="Zoom in">
+                <Image Source="images/ToolBars/zoomin.gif" Width="16" Height="16"/>
+            </Button>
+            <Button Name="cmdZoomOut" ToolTip="Zoom out">
+                <Image Source="images/ToolBars/zoomout.gif" Width="16" Height="16"/>
+            </Button>
+        </ToolBar>
+        <Border Margin="10,64,13,18" BorderBrush="White" BorderThickness="1">
+            <Grid Name="AGContainerGrid" Margin="10,10,10,10">
+                <AGVBW:ActiveGanttVBWCtl Name="ActiveGanttVBWCtl1"></AGVBW:ActiveGanttVBWCtl>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

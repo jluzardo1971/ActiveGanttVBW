@@ -1,0 +1,16 @@
+﻿<Window x:Class="fWBSPProperties"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Properties" Height="149" Width="359">
+    <Grid>
+        <Rectangle Height="80" HorizontalAlignment="Left" Name="Rectangle1" Stroke="Black" VerticalAlignment="Top" Width="337" />
+        <ComboBox SelectedValuePath="Tag" Height="23" HorizontalAlignment="Left" Margin="146,40,0,0" Name="cboPredecessorMode" VerticalAlignment="Top" Width="179">
+            <ComboBoxItem Content="PM_FORCE" Tag="0" />
+            <ComboBoxItem Content="PM_CREATEWARNINGFLAG" Tag="1" />
+            <ComboBoxItem Content="PM_RAISEEVENT" Tag="2" />
+        </ComboBox>
+        <CheckBox Content="EnforcePredecessors" Height="16" HorizontalAlignment="Left" Margin="12,12,0,0" Name="chkEnforcePredecessors" VerticalAlignment="Top" Width="163" />
+        <Label Content="PredecessorMode:" Height="28" HorizontalAlignment="Left" Margin="12,35,0,0" Name="Label1" VerticalAlignment="Top" />
+        <Button Content="OK" Height="23" HorizontalAlignment="Left" Margin="262,86,0,0" Name="cmdOK" VerticalAlignment="Top" Width="75" />
+    </Grid>
+</Window>

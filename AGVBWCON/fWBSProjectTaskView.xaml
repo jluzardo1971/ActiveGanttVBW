@@ -1,0 +1,12 @@
+﻿<Window x:Class="fWBSProjectTaskView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    TextOptions.TextFormattingMode="Display"
+    TextOptions.TextRenderingMode="ClearType"
+    Title="fWBSProjectTaskView" Height="373" Width="431" Name="Window1" Background="#FFC0C0C0">
+    <Canvas Name="oCanvas" Background="#FF2c3d5a">
+        <TextBox Canvas.Left="37" Canvas.Top="12" Height="22" Name="txtTaskName" Width="372" />
+        <Label Foreground="White" Canvas.Left="0" Canvas.Top="12" Height="22" Name="Label1" Width="81">Task:</Label>
+        <Button Canvas.Left="311" Canvas.Top="296" Height="27" Name="cmdOK" Width="98" Background="White">OK</Button>
+    </Canvas>
+</Window>

@@ -1,0 +1,47 @@
+﻿<Window x:Class="fLoadXML"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:AGVBW="clr-namespace:AGVBW;assembly=AGVBW"
+    TextOptions.TextFormattingMode="Display"
+    TextOptions.TextRenderingMode="ClearType"
+    Title="ActiveGanttVBW - Load From XML / Save As XML" Height="567" Width="500" Name="Window1" Background="#FFC0C0C0" BorderBrush="#FFC0C0C0" BorderThickness="1">
+    <Grid Background="#FF2c3d5a">
+        <Menu Margin="0,0,0,0" Height="21" VerticalAlignment="Top" >
+            <Menu.Background>
+                <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                    <GradientStop Color="#FFcad3e2" Offset="0" />
+                    <GradientStop Color="#FFaeb9cd" Offset="1" />
+                </LinearGradientBrush>
+            </Menu.Background>
+            <MenuItem Header="_File">
+                <MenuItem Background="White" Name="mnuLoadXML" Header="Load XML file..." IsCheckable="false" Padding="0,5,0,5">
+                    <MenuItem.Icon>
+                        <Image Source="images/ToolBars/open.gif" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Background="White" Name="mnuSaveXML" Header="Save XML file..." IsCheckable="false" Padding="0,5,0,5">
+                    <MenuItem.Icon>
+                        <Image Source="images/ToolBars/save.gif" Width="16" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator Margin="0,0,0,0" />
+                <MenuItem Background="White" Name="mnuClose" Header="_Close" IsCheckable="false" Padding="0,5,0,5">
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <Rectangle Height="27" Margin="0,21,0,0" Name="Rectangle1" Fill="#FF9caac1" VerticalAlignment="Top"></Rectangle>
+        <ToolBar Height="26" Margin="0,21,78,0" Name="ToolBar1" VerticalAlignment="Top" Background="#FFbcc7d8">
+            <Button Name="cmdLoadXML" ToolTip="Load XML file">
+                <Image Source="images/ToolBars/open.gif" Width="16" Height="16"/>
+            </Button>
+            <Button Name="cmdSaveXML" ToolTip="Save XML file">
+                <Image Source="images/ToolBars/save.gif" Width="16" Height="16"/>
+            </Button>
+        </ToolBar>
+        <Border Margin="10,64,13,18" BorderBrush="White" BorderThickness="1">
+            <Grid Name="AGContainerGrid" Margin="10,10,10,10">
+                <AGVBW:ActiveGanttVBWCtl Name="ActiveGanttVBWCtl1"></AGVBW:ActiveGanttVBWCtl>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
